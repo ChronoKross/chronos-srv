@@ -19,7 +19,7 @@ mongoose
 app.use(
   cors({
     origin: "https://stupendous-selkie-e5aa00.netlify.app", // Replace with the actual origin of your frontend
-    methods: ["GET", "POST", "DELETE", "PUT"], // Include the HTTP methods you need
+    methods: ["GET", "POST", "DELETE", "PUT", "PATCH"], // Include the HTTP methods you need
   })
 );
 
