@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
 });
 
 // LOGIN
-router.get("/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     const admin = await Admin.findOne({ userName: req.body.username });
     if (!admin) {
