@@ -24,9 +24,9 @@ app.use(
   })
 );
 
-app.use("/employee", employeeRoute);
-app.use("/admin", adminRoute);
-app.use("/auth", adminAuth);
+app.use("#/employee", employeeRoute);
+app.use("#/admin", adminRoute);
+app.use("#/auth", adminAuth);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
