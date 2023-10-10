@@ -16,6 +16,6 @@ const adminSchema = new mongoose.Schema(
 );
 
 // Add an index to the userName field
-adminSchema.index({ userName: 1 });
+adminSchema.index({ username: 1 });
 
 module.exports = mongoose.model("admin", adminSchema);
