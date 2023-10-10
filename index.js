@@ -7,6 +7,7 @@ const employeeRoute = require("./routes/employees");
 const adminRoute = require("./routes/Admin");
 const cors = require("cors");
 const adminAuth = require("./routes/Auth");
+//APP CURRENTLY WORKING
 
 dotenv.config();
 app.use(express.json());
