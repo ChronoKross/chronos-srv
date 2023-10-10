@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Define a catch-all route that serves your main HTML file
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(port, () => {
