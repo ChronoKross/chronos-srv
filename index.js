@@ -7,10 +7,12 @@ const employeeRoute = require("./routes/employees");
 const adminRoute = require("./routes/Admin");
 const cors = require("cors");
 const adminAuth = require("./routes/Auth");
+const { seedDB } = require("./utils/seedDB");
 //APP CURRENTLY WORKING
 
 dotenv.config();
 app.use(express.json());
+seedDB();
 
 mongoose
   .connect(process.env.MONGO_URL)
