@@ -22,8 +22,8 @@ const employeeSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-employeeSchema.methods.calculateHoursWorked = function () {
-  let totalHoursWorked = 0;
+employeeSchema.methods.calculateHoursNotWorked = function () {
+  let totalHoursNotWorked = 0;
 
   for (const entry of this.timeOff) {
     if (entry.time) {
@@ -37,11 +37,14 @@ employeeSchema.methods.calculateHoursWorked = function () {
 
       // Calculate the duration in hours
       const durationInHours = durationInMilliseconds / (1000 * 60 * 60);
-      totalHoursWorked += durationInHours;
+      totalHoursNotWorked += 12 - durationInHours; // Assuming a 12-hour shift
+    } else {
+      // If no time is provided, assume the entire shift was not worked
+      totalHoursNotWorked += 12; // Assuming a 12-hour shift
     }
   }
 
-  return totalHoursWorked;
+  return totalHoursNotWorked;
 };
 
 const Employee = mongoose.model("Employee", employeeSchema);
