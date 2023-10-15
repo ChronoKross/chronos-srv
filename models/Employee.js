@@ -7,13 +7,30 @@ const employeeSchema = new mongoose.Schema(
       required: true,
     },
     position: {
-      type: Number,
+      type: String, // Assuming position is a string, not a number
       required: true,
+    },
+    timeOff: {
+      type: [
+        {
+          date: Date,
+          type: String, // You can specify the type of time off, like "vacation" or "sick leave"
+        },
+      ],
     },
   },
   { timestamps: true }
 );
 
-const employee = mongoose.model("Employee", employeeSchema);
+employeeSchema.methods.calculateTotalTimeOff = function () {
+  return this.timeOff.reduce((totalTimeOff, entry) => {
+    const timeOffDuration = entry.date.getTime();
+    totalTimeOff += timeOffDuration;
 
-module.exports = employee;
+    return totalTimeOff;
+  }, 0);
+};
+
+const Employee = mongoose.model("Employee", employeeSchema);
+
+module.exports = Employee;
