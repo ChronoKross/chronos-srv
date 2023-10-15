@@ -12,7 +12,7 @@ const { seedDB } = require("./utils/seedDB");
 
 dotenv.config();
 app.use(express.json());
-seedDB();
+await seedDB();
 
 mongoose
   .connect(process.env.MONGO_URL)
