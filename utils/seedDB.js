@@ -46,7 +46,7 @@ const seedData = [
   {
     name: "Ivan",
     position: 8,
-    timeOff: [{ date: Date.now(), type: "volunteer" }],
+    timeOff: [{ date: new Date.now(), type: "volunteer" }],
   },
 ];
 
