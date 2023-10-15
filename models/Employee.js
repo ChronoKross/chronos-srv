@@ -13,7 +13,7 @@ const employeeSchema = new mongoose.Schema(
     timeOff: {
       type: [
         {
-          date: Date,
+          date: String,
           type: String, // You can specify the type of time off, like "vacation" or "sick leave"
         },
       ],
