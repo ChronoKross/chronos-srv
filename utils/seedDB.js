@@ -19,42 +19,82 @@ const seedData = [
   {
     name: "Nathan",
     position: 1,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Eric",
     position: 2,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "John",
     position: 3,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Doug",
     position: 4,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Johny",
     position: 5,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split("")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Red",
     position: 6,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Jose",
     position: 7,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
   {
     name: "Ivan",
     position: 8,
-    timeOff: [{ date: new Date().toISOString(), type: "volunteer" }],
+    timeOff: [
+      {
+        time: new Date().toLocaleString().split(" ")[1],
+        date: new Date().toLocaleString().split(" ")[0],
+      },
+    ],
   },
 ];
 
