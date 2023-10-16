@@ -41,20 +41,6 @@ router.get("/", async (req, res) => {
 });
 
 //calculate total time off per employee
-router.get("/timeOff/:employeeId", async (req, res) => {
-  try {
-    const employee = await Employee.findById(req.params.employeeId);
-    if (!employee) {
-      return res.status(404).json({ error: "Employee not found" });
-    }
-
-    const total_time_off = employee.calculateTotalTimeOff();
-    res.json({ total_time_off });
-  } catch (error) {
-    console.error("Error calculating time off:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
 
 // // Get a specific employee by ID
 // router.get("/employees/:id", async (req, res) => {

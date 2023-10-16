@@ -6,11 +6,21 @@ const employeeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    jobTitle: {
+      type: String,
+    },
+    shift: {
+      type: Number,
+      required: true,
+    },
+    pay: {
+      type: Number,
+    },
     position: {
       type: String, // Assuming position is a string, not a number
       required: true,
     },
-    timeOff: {
+    clockOuts: {
       type: [
         {
           date: String,
