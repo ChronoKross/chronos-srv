@@ -40,6 +40,8 @@ const findTimeMissed = (clockOutTime, shift) => {
   return hoursSaved;
 };
 
+// Math.floor the input time
+
 console.log("test 1:" + findTimeMissed("12:00 AM", "1")); // 7
 console.log("test 2:" + findTimeMissed("7:00 AM")); // 12
 console.log("test 3:" + findTimeMissed("7:00 PM", "1")); // 0

@@ -18,6 +18,8 @@ mongoose
 const seedData = [
   {
     name: "Nathan",
+    jobTitle: "Manager",
+    shift: 2,
     position: 1,
     timeOff: [
       {
